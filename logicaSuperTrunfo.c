@@ -12,6 +12,7 @@ float area, pib;
 int turisticos;
 float densidadepoulacional;
 float pibpercapita;
+int escolha1;
 
 
 //infomações fornecidas
@@ -64,6 +65,7 @@ float densidadepoulaciona;
 float pibpercapia;
 int cartas;
 int informacao;
+int escolha2;
 
 //infomações fornecidas
 
@@ -104,80 +106,109 @@ densidadepoulaciona = (float) popul / are;
 pibpercapia = (float) ( pb / popul ) * 1000000000;
 
 
-printf("***Escolha um atributo da carta para comparar***\n");
-printf("1. População\n" );
-printf("2. Área\n " );
-printf("3. PIB\n ");
-printf("4. Pontos turisticos\n ");
-printf("5. Densidade populacional\n ");
-printf("Escolha a opção que queira comparar: ");
-scanf("%d", &cartas);
+        printf("***Opções para o Primeiro jogador querer comparar***\n");
+        printf("1. População\n" );
+        printf("2. Área\n " );
+        printf("3. PIB\n ");
+        printf("4. Pontos turisticos\n ");
+        printf("5. Densidade populacional\n ");
+        printf("Escolha a opção que queira comparar: ");
+        scanf("%d", &escolha1);
 
-//interação com o uso dos switch's
-switch (cartas)
-{
 
-case 1:
-        if(populacao > popul){
-        printf("A carta 1 venceu pois tem mais população que a carta 2. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
-    }else if(popul > populacao){
-        printf("A carta 2 venceu pois tem mais população que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
-    }else{
-        printf("As duas cartas tem a mesma população. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
-    }
-    break;
-
-case 2:
-        if(area > are){
-        printf("A carta 1 venceu pois tem mais área que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacid, are, nomedacidade, area);
-    }else if(are > area){
+        printf("***Opções para o segundo jogador querer comparar***\n");
+        printf("1. População\n" );
+        printf("2. Área\n " );
+        printf("3. PIB\n ");
+        printf("4. Pontos turisticos\n ");
+        printf("5. Densidade populacional\n ");
+        printf("Escolha a opção que queira comparar: ");
+        scanf("%d", &escolha2);
+ 
+        if (escolha1 == escolha2){
+            printf("Os jogadores escolheram a mesma opção. Favor tentar novamente\n");
+        }else {
+            switch (escolha1){
+                       
+        case 1:
+        populacao > popul? 
+        printf("A carta 1 venceu pois tem mais população que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, populacao, nomedacid, popul) : 
+        printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
+        break;
+       
+        case 2:
+        area > are? 
+        printf("A carta 1 venceu pois tem mais área que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, area, nomedacid, are) : 
         printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, are, nomedacidade, area);
-    }else{
-        printf("As duas cartas tem a mesma área. %s tem %.2f e %s tem %.2f\n", nomedacid, are, nomedacidade, area);
-    }
-    break;
+        break;
 
-case 3:
-        if(pib > pb){
-        printf("A carta 1 venceu pois tem mais PIB que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacid, pb, nomedacidade, pib);
-    }else if(pb > pib){
-        printf("A carta 2 venceu pois tem mais PIB que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, pb, nomedacidade, pib);
-    }else{
-        printf("As duas cartas tem o mesmo PIB . %s tem %.2f e %s tem %.2f\n", nomedacid, pb, nomedacidade, pib);
-    }
-    break;
+        case 3:
+        pib > pb? 
+        printf("A carta 1 venceu pois tem mais PIB que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, pib, nomedacid, pb) : 
+        printf("A carta 2 venceu pois tem mais PIB que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, pib, nomedacidade, pb);
+        break;
 
-case 4:
-        if(turisticos > turistic){
-        printf("A carta 1 venceu pois tem mais pontos turísticos que a carta 2. %s tem %d e %s tem %d\n", nomedacid, turistic, nomedacidade, turisticos);
-    }else if(turistic > turisticos){
-        printf("A carta 2 venceu pois tem mais pontos turísticos que a carta 1. %s tem %d e %s tem %d\n", nomedacid, turistic, nomedacidade, turistic);
-    }else{
-        printf("As duas cartas tem a mesma quantidade de pontos turísticos. %s tem %d e %s tem %d\n",  nomedacid, turisticos, nomedacidade, turistic);
-    }
-    break;
+        case 4:
+        turisticos > turistic? 
+        printf("A carta 1 venceu pois tem mais pontos turisticos que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, turisticos, nomedacid, turistic) : 
+        printf("A carta 2 venceu pois tem mais pontos turisticos que a carta 1. %s tem %d e %s tem %d\n", nomedacid, turistic, nomedacidade, turisticos);
+        break;
 
-case 5:
-       if(densidadepoulacional < densidadepoulaciona){
-        printf("A carta 1 venceu pois tem menos densidade populacional que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacid, densidadepoulaciona, nomedacidade, densidadepoulacional);
-    }else if(densidadepoulaciona < densidadepoulacional){
-        printf("A carta 2 venceu pois tem menos densidade populacional que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, densidadepoulaciona, nomedacidade, densidadepoulacional);
-    }else{
-        printf("As duas cartas tem a mesma densidade populacional. %s tem %.2f e %s tem %.2f\n", nomedacid, densidadepoulaciona, nomedacidade, densidadepoulacional);
-    }
-    break;
+        case 5:
+        densidadepoulacional < densidadepoulaciona? 
+        printf("A carta 1 venceu pois tem menos densidadepoulacional que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, densidadepoulacional, nomedacid, densidadepoulaciona) : 
+        printf("A carta 2 venceu pois tem menos densidadepoulacional que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, densidadepoulaciona, nomedacidade, densidadepoulacional);
+        break;
     
-    default:
-    printf("Ocorreu um erro. Tente novamente digitando entre ( 1 até 5 ).\n");
+        default:
+        printf("Ocorreu um erro. Tente novamente digitando entre ( 1 até 5 ).\n");
+     }
+
+        switch (escolha2){
+                       
+        case 1:
+        populacao > popul? 
+        printf("A carta 1 venceu pois tem mais população que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, populacao, nomedacid, popul) : 
+        printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
+        break;
+    
+        case 2:
+        area > are? 
+        printf("A carta 1 venceu pois tem mais área que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, area, nomedacid, are) : 
+        printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, are, nomedacidade, area);
+        break;
+        
+        case 3:
+        pib > pb? 
+        printf("A carta 1 venceu pois tem mais PIB que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, pib, nomedacid, pb) : 
+        printf("A carta 2 venceu pois tem mais PIB que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, pib, nomedacidade, pb);
+        break;
+
+        case 4:
+        turisticos > turistic? 
+        printf("A carta 1 venceu pois tem mais pontos turisticos que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, turisticos, nomedacid, turistic) : 
+        printf("A carta 2 venceu pois tem mais pontos turisticos que a carta 1. %s tem %d e %s tem %d\n", nomedacid, turistic, nomedacidade, turisticos);
+        break;
+
+        case 5:
+        densidadepoulacional < densidadepoulaciona? 
+        printf("A carta 1 venceu pois tem menos densidadepoulacional que a carta 2. %s tem %.2f e %s tem %.2f\n", nomedacidade, densidadepoulacional, nomedacid, densidadepoulaciona) : 
+        printf("A carta 2 venceu pois tem menos densidadepoulacional que a carta 1. %s tem %.2f e %s tem %.2f\n", nomedacid, densidadepoulaciona, nomedacidade, densidadepoulacional);
+        break;
+
+        default:
+        printf("Ocorreu um erro. Tente novamente digitando entre ( 1 até 5 ).\n");
  }
 
-    printf("Gostaria de ver os dados das cartas?\n");
-    printf("1. Sim\n");
-    printf("2. Não\n");
-    printf("Opção 1 ou 2 ?\n");
-    scanf("%d", &informacao);
+}    
 
-    switch (informacao){
+        printf("Gostaria de ver os dados das cartas?\n");
+        printf("1. Sim\n");
+        printf("2. Não\n");
+        printf("Opção 1 ou 2 ?\n");
+        scanf("%d", &informacao);
+
+        switch (informacao){
         case 1:
 
         printf("***Dados da Primeira Carta***\n");
