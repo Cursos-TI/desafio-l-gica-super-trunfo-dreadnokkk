@@ -133,7 +133,7 @@ pibpercapia = (float) ( pb / popul ) * 1000000000;
         case 1:
         populacao > popul? 
         printf("A carta 1 venceu pois tem mais população que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, populacao, nomedacid, popul) : 
-        printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
+        printf("A carta 2 venceu pois tem mais população que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
         break;
        
         case 2:
@@ -169,7 +169,7 @@ pibpercapia = (float) ( pb / popul ) * 1000000000;
         case 1:
         populacao > popul? 
         printf("A carta 1 venceu pois tem mais população que a carta 2. %s tem %d e %s tem %d\n", nomedacidade, populacao, nomedacid, popul) : 
-        printf("A carta 2 venceu pois tem mais área que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
+        printf("A carta 2 venceu pois tem mais população que a carta 1. %s tem %d e %s tem %d\n", nomedacid, popul, nomedacidade, populacao);
         break;
     
         case 2:
